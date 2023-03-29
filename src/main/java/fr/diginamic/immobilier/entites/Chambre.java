@@ -5,11 +5,14 @@ package fr.diginamic.immobilier.entites;
  */
 public class Chambre extends Piece {
 
-	/** Constructeur
-	 * @param etage étage
-	 * @param superficie superficie
-	 */
-	public Chambre(int etage, double superficie) {
+	/**
+     * Constructeur
+     *
+     * @param etage      étage
+     * @param superficie superficie
+     * @param i
+     */
+	public Chambre(int etage, double superficie, int i) {
 		super(etage, superficie);
 	}
 

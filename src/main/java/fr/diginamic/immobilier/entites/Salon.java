@@ -5,11 +5,14 @@ package fr.diginamic.immobilier.entites;
  */
 public class Salon extends Piece {
 
-	/** Constructeur
-	 * @param etage étage
-	 * @param superficie superficie
-	 */
-	public Salon(int etage, double superficie) {
+	/**
+     * Constructeur
+     *
+     * @param etage      étage
+     * @param superficie superficie
+     * @param b
+     */
+	public Salon(int etage, double superficie, boolean b) {
 		super(etage, superficie);
 	}
 
