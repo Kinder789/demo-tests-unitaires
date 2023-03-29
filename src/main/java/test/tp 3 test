@@ -1,0 +1,30 @@
+EXERCICE 2 :
+
+Exemples de distance de Levenshtein:
+
+4)Entre «distance» et «instance» quelle est la distance?
+La distance Levenshtein entre "distance" et "instance" est de 2. Les différences sont le "d" et le "t" qui doivent être remplacés pour obtenir la seconde chaîne de caractères.
+
+5)Entre «Chien» et «Chine» quelle est la distance Levenshtein?
+La distance Levenshtein entre "Chien" et "Chine" est de 1.
+Pour passer de «Chien» à «Chine», une seule opération est nécessaire, à savoir remplacer la lettre «i» par la lettre «e».
+
+TACHE A REALISER /
+
+Package:fr.diginamic.utilsA tester:StringUtils
+Cette classe a été trouvée sur internet mais nous souhaitons la tester correctement avant de l’intégrer à notre projet.
+
+b) Intéressez-vous également à la robustesse de cette classe.
+Que se passe t’il si on passe à cette classe des paramètres NULL?
+- Si l'un des paramettre est null, la methode levenshteinDistance renverra -1 au lieu de lance l'exception NullPointerException.
+Proposez un correctif pour rendre cette classe plus robuste.
+
+
+Exercice 3 :
+
+Package:fr.diginamic.immobilierA tester:Maison
+
+Réalisez une classe de tests unitaires qui permet de tester la classe Maisonen respectant les instructions suivantes:
+
+
+
