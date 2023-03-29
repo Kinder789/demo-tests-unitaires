@@ -2,24 +2,22 @@ package fr.diginamic.utils;
 
 /**
  * Classe qui fournit des services de traitements de chaines de caractères
- * 
+ *
  * @author DIGINAMIC
  */
 public final class StringUtils {
 
 	/**
 	 * Retourne la distance de Levenshtein entre 2 chaines de caractères
-	 * 
+	 *
 	 * @param lhs chaine 1
 	 * @param rhs chaine 2
 	 * @return distance
 	 */
 	public static int levenshteinDistance(CharSequence lhs, CharSequence rhs) {
-		if(lhs == null || rhs == null){
-			return -1;
+		if (lhs == null || rhs == null) {
+			throw new IllegalArgumentException("Les paramètres ne doivent pas être null.");
 		}
-
-
 		int len0 = lhs.length() + 1;
 		int len1 = rhs.length() + 1;
 

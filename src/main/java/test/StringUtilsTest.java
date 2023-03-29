@@ -1,26 +1,27 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.Assert;
+import org.junit.Test;
 import fr.diginamic.utils.StringUtils;
 
-import org.junit.Test;
+import static org.junit.Assert.*;
 
-public class StringUtilsTest{
+public class StringUtilsTest {
 
     @Test
     public void testLevenshteinDistance_nominalCases() {
-        assertEquals(1, StringUtils.levenshteinDistance("Chine", "Chien"));
-        assertEquals(1, StringUtils.levenshteinDistance("Vienne", "Sienne"));
         assertEquals(0, StringUtils.levenshteinDistance("", ""));
-        assertEquals(0, StringUtils.levenshteinDistance("Hello", "Hello"));
-        assertEquals(6, StringUtils.levenshteinDistance("World", ""));
-        assertEquals(3, StringUtils.levenshteinDistance("Saturday", "Sunday"));
+        assertEquals(0, StringUtils.levenshteinDistance("abc", "abc"));
+        assertEquals(1, StringUtils.levenshteinDistance("abc", "abd"));
+        assertEquals(1, StringUtils.levenshteinDistance("abc", "ab"));
+        assertEquals(1, StringUtils.levenshteinDistance("abc", "abcd"));
+        assertEquals(1, StringUtils.levenshteinDistance("abc", "axc"));
+        assertEquals(1, StringUtils.levenshteinDistance("abc", "abx"));
+        assertEquals(3, StringUtils.levenshteinDistance("abc", "xyz"));
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testLevenshteinDistance_robustness() {
-        assertEquals(0, StringUtils.levenshteinDistance(null, null));
-        assertEquals(5, StringUtils.levenshteinDistance(null, "Hello"));
-        assertEquals(5, StringUtils.levenshteinDistance("Hello", null));
+        StringUtils.levenshteinDistance(null, "");
     }
 }
